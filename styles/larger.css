@@ -1,0 +1,75 @@
+/* Larger screens - horizontal nav */
+@media (min-width: 768px) {
+  #hambutton {
+    display: none;
+  }
+
+  nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: black;
+    padding: 1rem;
+  }
+
+  .navigation a {
+    display: inline-block; /* show links */
+    padding: 0 1rem; /* spacing between links */
+    text-decoration: none;
+    color: #fff;
+    background: none;
+  }
+
+  /* Optional: remove extra mobile-only classes */
+  /* .open a {
+    display: inline-block;
+  } */
+  .grid {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr auto; /* 1st row columns */
+    grid-template-rows: 1fr;
+    gap: 1rem;
+  }
+
+  .sec1,
+  .sec2 {
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  /* .section h2 {
+    margin: 0;
+  } */
+
+  .sec1 {
+    grid-column: 1; /* first column */
+    grid-row: 1; /* first row */
+  }
+
+  .sec2 {
+    grid-column: 2; /* second column */
+    grid-row: 1; /* first row */
+  }
+
+  .sec3 {
+    grid-column: 1 / span 2; /* span both columns */
+    grid-row: 2; /* second row */
+    background-color: #f0f0f0;
+  }
+
+  .sec3 h2 {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+}

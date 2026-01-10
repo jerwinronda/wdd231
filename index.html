@@ -3,30 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <meta name="description" content="" />
+    <title>Jerwin Ronda | Web Development Portfolio</title>
+    <meta
+      name="description"
+      content="Jerwin Ronda’s web development portfolio featuring coursework, certificates, projects, and responsive design examples for WDD and CSE classes."
+    />
+
     <meta name="author" content="Jerwin Ronda" />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
-    <script src="scripts/" defer></script>
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script src="scripts/homepage.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Chamber</a></li>
-          <li><a href="">Final</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1></h1>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
-    <footer>
-      <span></span>
-    </footer>
+    <div class="home-page">
+      <header class="header">
+        <img
+          src="images/jr-logo.svg"
+          alt="Jerwin Ronda Logo"
+          width="32"
+          height="32"
+          id="jr-logo"
+        />
+        <span id="name-logo">Jerwin Ronda</span>
+        <button
+          type="button"
+          id="hambutton"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        ></button>
+
+        <nav>
+          <ul class="navigation">
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Home</h1>
+        <div class="grid">
+          <section class="section sec1">
+            <h2>About Me</h2>
+            <p>
+              Hi, I’m Jerwin Ronda, currently pursuing my first certificate in
+              Web and Computer Programming as part of my Bachelor’s degree in
+              Software Development. I am studying through BYU Pathway Worldwide,
+              where I am developing my skills in coding, web development, and
+              software design. I am passionate about building functional and
+              creative digital solutions, and I am eager to grow my knowledge in
+              programming and technology.
+            </p>
+          </section>
+          <section class="section sec2">
+            <h2>Student Photo</h2>
+            <img
+              src="images/profile-pic.webp"
+              alt="Jerwin's Profile"
+              width="289"
+              height="335"
+            />
+          </section>
+          <section class="section sec3">
+            <h2>Web Certificate Courses</h2>
+            <div class="cert-controls">
+              <button id="all">All</button>
+              <button id="wdd">WDD</button>
+              <button id="cse">CSE</button>
+            </div>
+            <div id="certificates"></div>
+            <p>
+              The total credits for courses listed above is
+              <span id="totalCredits"></span>
+            </p>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <div class="socmedia-icons">
+          <a href="https://github.com/jerwinronda"
+            ><img
+              src="images/github-logo.svg"
+              alt="Github Icon"
+              width="36"
+              height="36"
+          /></a>
+          <a href="https://www.linkedin.com/in/jerwin-ronda/"
+            ><img
+              src="images/linked-logo.svg"
+              alt="LinkedIn Icon"
+              width="36"
+              height="36"
+          /></a>
+          <a href="#"
+            ><img
+              src="images/twitter-x-logo.webp"
+              alt="Twitter Icon"
+              width="36"
+              height="36"
+          /></a>
+        </div>
+        <p id="footer-p1">
+          © <span id="currentyear"></span> • Jerwin Ronda • Philippines
+        </p>
+        <p id="footer-p2">Last Modification: <span id="lastModified"></span></p>
+      </footer>
+    </div>
   </body>
 </html>

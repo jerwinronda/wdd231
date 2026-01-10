@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+#jr-logo,
+#name-logo,
+#hambutton {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* Mobile View */
+#name-logo {
+  text-align: left;
+  font-family: times, serif;
+  font-size: 2.4rem;
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+#hambutton {
+  font-size: 2.4rem;
+  font-weight: 700;
+  border: 1px solid black;
+  background: gainsboro;
+  color: #000;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  padding: 0 1rem;
+}
+
+#hambutton::before {
+  content: "≡";
+}
+#hambutton.open::before {
+  content: "X";
+}
+nav {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* align-items: flex-start; */
+  list-style: none;
+  background-color: #000;
+}
+
+.navigation a {
+  display: none;
+  padding: 0.5rem;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  border: 1px solid #000;
+}
+
+.navigation a:hover {
+  color: #000;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.open a {
+  display: block;
+}
+
+/* WAYFINDING */
+.navigation li.current a {
+  background-color: lightgray;
+  color: #000;
+  font-weight: bold;
+}
+
+
+/* Main Section */
+main {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  /* background-color: lightgray; */
+}
+
+h2 {
+  margin: 0; /* remove default margin */
+  padding: 1rem; /* spacing inside heading */
+  background-color: black; /* heading background */
+  color: white; /* text color */
+  text-align: center;
+  width: 100%; /* full width of parent section */
+  box-sizing: border-box; /* include padding in width */
+  font-size: 2.4rem; /* consistent font size */
+}
+
+.sec1 {
+  border: 1px solid black;
+  background-color: lightgray;
+}
+
+.sec1 p {
+  padding: 1rem;
+}
+
+.sec2 {
+  /* margin: 1.6rem auto; */
+  border: 1px solid black;
+  background-color: lightgray;
+  padding: 0; /* remove padding so h2 can touch borders */
+  position: relative;
+}
+
+.sec2 img {
+  max-width: 90%; /* responsive, won’t overflow section */
+  height: auto; /* keep aspect ratio */
+  margin: 1rem auto; /* vertical spacing + horizontal centering */
+  display: block; /* required to center with margin auto */
+  border: 1px solid #fff; /* optional styling */
+  border-radius: 0.5rem; /* optional rounded corners */
+}
+
+.cert-controls {
+  display: flex; /* enable flex layout */
+  justify-content: center; /* center buttons horizontally */
+  gap: 1.5rem; /* space between each button */
+  margin: 1rem 0; /* vertical spacing */
+}
+
+.cert-controls button {
+  flex: 1; /* all buttons take equal width */
+  max-width: 150px; /* optional: limit max width */
+  padding: 0.8rem 1.5rem; /* vertical and horizontal padding */
+  font-size: 1.6rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.cert-controls button:hover {
+  color: white;
+  background-color: black;
+}
+
+.sec3 p {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.certificates {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.certificates li {
+  padding: 0.5rem 2rem;
+  border: 1px solid black;
+  width: 30%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  background-color: lightgray;
+}
+.courses {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.courses li {
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: lightgray;
+}
+
+#certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  border: 2px solid #333;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.course-card.completed {
+  background-color: #d4edda; /* completed highlight */
+  border-color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Footer Sectiion */
+
+footer {
+  text-align: center;
+}
+
+.socmedia-icons img {
+  width: 36px;
+  height: 36px;
+  margin-right: 2.4rem;
+}
+
+footer p {
+  /* margin: 0; */
+  /* padding: 1rem; */
+  line-height: 1.2;
+  background-color: lightgray;
+  font-size: 2.4rem;
+}
+#footer-p1 {
+  padding: 1rem 0 0 0;
+}
+
+#footer-p2 {
+  padding: 0 0 1rem;
+}
