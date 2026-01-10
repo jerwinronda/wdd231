@@ -15,15 +15,35 @@ html {
   vertical-align: middle;
 }
 
+body{
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 header {
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.section h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 /* Mobile View */
 #name-logo {
   text-align: left;
-  font-family: times, serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2.4rem;
   white-space: nowrap;
   margin-left: 0.5rem;
@@ -69,6 +89,9 @@ nav {
   color: #fff;
   font-size: 2rem;
   border: 1px solid #000;
+   font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .navigation a:hover {
@@ -87,7 +110,6 @@ nav {
   color: #000;
   font-weight: bold;
 }
-
 
 /* Main Section */
 main {
