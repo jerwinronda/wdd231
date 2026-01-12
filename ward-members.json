@@ -1,0 +1,38 @@
+{
+  "family_name": "Ronda",
+  "move_in_date": "January 12, 2026",
+  "number_of_people": 6,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Jerwin Ronda",
+      "gender": "Male",
+      "birthdate": "October 9, 2000"
+    },
+    {
+      "name": "Jerwin Ronda",
+      "gender": "Male",
+      "birthdate": "October 9, 2000"
+    },
+    {
+      "name": "Jerwin Ronda",
+      "gender": "Male",
+      "birthdate": "October 9, 2000"
+    },
+    {
+      "name": "Jerwin Ronda",
+      "gender": "Male",
+      "birthdate": "October 9, 2000"
+    },
+    {
+      "name": "Jerwin Ronda",
+      "gender": "Male",
+      "birthdate": "October 9, 2000"
+    },
+    {
+      "name": "Jerwin Ronda",
+      "gender": "Male",
+      "birthdate": "October 9, 2000"
+    }
+  ]
+}
