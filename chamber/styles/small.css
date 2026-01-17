@@ -246,6 +246,12 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  #members.list .member-card {
+    flex-direction: row; /* override column on desktop */
+    gap: 1rem;
+  }
+}
 /* #members.list .member-card > div:not(.image-container) {
   flex: 1;
 } */
