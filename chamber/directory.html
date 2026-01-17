@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Jerwin Ronda" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <script src="scripts/directory.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <header>
+        <img src="/images/jr-logo.svg" alt="" width="32" height="32" />
+        <span id="logo-name">Oroquieta Chamber of Commerce</span>
+        <button
+          id="menuBtn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        ></button>
+        <nav>
+          <ul class="navMenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Discovery</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+          </ul>
+          <main>
+            <section class="view-toggle">
+              <button id="gridBtn">Grid</button>
+              <button id="listBtn">List</button>
+            </section>
+
+            <section id="members" class="grid-view"></section>
+          </main>
+
+          <footer>
+            <p>Contact: info@yourcitychamber.org | (555) 555-5555</p>
+            <p>
+              © <span id="year"></span> Your City Chamber | Your Full Name | WDD
+              231
+            </p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+          </footer>
+        </nav>
+      </header>
+    </header>
+  </body>
+</html>
