@@ -1,4 +1,14 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 /* ================= Header container ================= */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 header {
   display: flex;
   justify-content: space-between; /* left vs right */
@@ -89,7 +99,7 @@ header {
 .navigation.show {
   transform: translateX(0);
   opacity: 1;
-  pointer-events: auto;
+  /* pointer-events: auto; */
 }
 
 .navigation ul {
@@ -224,10 +234,10 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-
+/* 
 #members.list {
   display: block;
-}
+} */
 
 #members.list .member-card {
   display: flex;
@@ -236,9 +246,9 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-#members.list .member-card > div:not(.image-container) {
+/* #members.list .member-card > div:not(.image-container) {
   flex: 1;
-}
+} */
 
 footer {
   text-align: center;
@@ -248,5 +258,3 @@ footer {
   font-size: 0.85rem;
   margin-top: 2rem;
 }
-
-

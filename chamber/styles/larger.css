@@ -44,7 +44,7 @@
     position: static !important; /* reset fixed position */
     transform: none !important; /* remove slide transform */
     opacity: 1 !important; /* make fully visible */
-    pointer-events: auto !important; /* make clickable */
+
     height: auto !important; /* reset height */
     width: auto !important; /* reset width */
     background-color: transparent !important; /* remove bg */
@@ -67,11 +67,10 @@
   .navigation li a:focus {
     border: #fff;
     border-radius: 4px;
-    color: #ADD8E6;
+    color: #add8e6;
     background-color: #000;
     padding: 1rem;
     /* text-decoration: underline; */
-
   }
 
   .discover-icon {
@@ -160,10 +159,10 @@
 }
 
 /* ===== Hide images in list view on mobile ===== */
-  #members.list .member-card {
-    flex-direction: column; /* vertical stack on mobile */
-  }
+#members.list .member-card {
+  flex-direction: column; /* vertical stack on mobile */
+}
 
-  #members.list .member-card .image-container {
-    display: none; /* hide image to prevent overlap */
-  }
+#members.list .member-card .image-container {
+  display: none; /* hide image to prevent overlap */
+}
