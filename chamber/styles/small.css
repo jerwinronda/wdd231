@@ -241,7 +241,7 @@ h1 {
 
 #members.list .member-card {
   display: flex;
-  flex-direction: row; /* horizontal for desktop */
+  flex-direction: column;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }

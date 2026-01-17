@@ -160,7 +160,7 @@
 
 /* ===== Hide images in list view on mobile ===== */
 #members.list .member-card {
-  flex-direction: column; /* vertical stack on mobile */
+  flex-direction: row; /* vertical stack on mobile */
 }
 
 #members.list .member-card .image-container {
