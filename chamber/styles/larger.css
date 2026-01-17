@@ -158,3 +158,12 @@
     object-fit: cover; /* fills the container, crops if necessary */
   }
 }
+
+/* ===== Hide images in list view on mobile ===== */
+  #members.list .member-card {
+    flex-direction: column; /* vertical stack on mobile */
+  }
+
+  #members.list .member-card .image-container {
+    display: none; /* hide image to prevent overlap */
+  }
