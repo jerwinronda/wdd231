@@ -93,16 +93,24 @@
   } */
 
   .home-sections {
-  display: grid;
-  grid-template: auto auto / 1fr 25% 25%;
-  gap: 1rem;
-}
+    display: grid;
+    grid-template: auto auto / 1fr 25% 25%;
+    gap: 1rem;
+  }
 
-.spotlights {
-  margin-top: 3rem;
-  grid-column: 1 / -1;
-}
+  .home-hero-img button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 100px;
+    height: 44px;
+    border-radius: 1rem;
+  }
 
+  .spotlights {
+    margin-top: 3rem;
+    grid-column: 1 / -1;
+  }
 
   /* ================= Members Grid ================= */
   #members {
@@ -180,14 +188,13 @@
     object-fit: cover; /* fills the container, crops if necessary */
   }
 
-  footer{
-  display: flex;
-  justify-content: space-around;
-}
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /* ===== Hide images in list view on mobile ===== */
 #members.list .member-card .image-container {
   display: none; /* hide image to prevent overlap */
 }
-
