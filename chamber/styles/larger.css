@@ -53,6 +53,7 @@
     flex-direction: row !important; /* horizontal */
     box-shadow: none !important; /* remove mobile shadow */
     transition: none !important; /* no transition on desktop */
+    pointer-events: auto !important;
   }
 
   .navigation li a {
@@ -83,6 +84,26 @@
   .hambutton {
     display: none;
   }
+
+  /* ================= Home Page Section ================= */
+  /* .home-sections {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 25% 25%;
+    gap: 1rem;
+  } */
+
+  .home-sections {
+  display: grid;
+  grid-template: auto auto / 1fr 25% 25%;
+  gap: 1rem;
+}
+
+.spotlights {
+  margin-top: 3rem;
+  grid-column: 1 / -1;
+}
+
+
   /* ================= Members Grid ================= */
   #members {
     display: grid;
@@ -97,7 +118,9 @@
     border-radius: 8px;
     padding: 1.25rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -156,9 +179,15 @@
     height: 100%;
     object-fit: cover; /* fills the container, crops if necessary */
   }
+
+  footer{
+  display: flex;
+  justify-content: space-around;
+}
 }
 
 /* ===== Hide images in list view on mobile ===== */
 #members.list .member-card .image-container {
   display: none; /* hide image to prevent overlap */
 }
+

@@ -4,14 +4,16 @@
   font-weight: 500;
   font-style: normal;
 }
-/* ================= Header container ================= */
+
 body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* ================= Header container ================= */
+
 header {
   display: flex;
-  justify-content: space-between; /* left vs right */
+  justify-content: space-between;
   align-items: center;
   padding: 0.5rem 0.5rem;
   background-color: #003366;
@@ -19,7 +21,7 @@ header {
   flex-wrap: nowrap;
 }
 
-/* ================= Left section: logo + site name ================= */
+/* Left section: logo + site name */
 .header-left {
   display: flex;
   align-items: center;
@@ -27,16 +29,15 @@ header {
 }
 
 .site-logo {
-  width: 44px; /* fixed width for mobile */
-  height: 44px; /* keep square */
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
 }
-
 .site-name {
   font-size: 1.1rem;
   font-weight: bold;
-  white-space: normal; /* allow wrapping */
-  max-width: 180px; /* helps wrap into 2 lines on small screens */
+  white-space: normal;
+  max-width: 180px;
   line-height: 1.2rem;
 }
 
@@ -48,14 +49,14 @@ header {
 }
 
 .discover-icon {
-  width: 44px; /* fixed width */
-  height: 44px; /* fixed height */
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
 }
 
 .hambutton {
-  width: 44px; /* fixed width */
-  height: 44px; /* fixed height */
+  width: 44px;
+  height: 44px;
   background-color: #0055aa;
   border: none;
   border-radius: 5px;
@@ -64,8 +65,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0; /* remove inner padding */
-  font-size: 1.2rem; /* optional icon size */
+  padding: 0;
+  font-size: 1.2rem;
 
   position: relative;
   z-index: 1100;
@@ -91,7 +92,9 @@ header {
   opacity: 0;
   pointer-events: none;
 
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   z-index: 1100;
 }
 
@@ -99,7 +102,7 @@ header {
 .navigation.show {
   transform: translateX(0);
   opacity: 1;
-  /* pointer-events: auto; */
+  pointer-events: auto;
 }
 
 .navigation ul {
@@ -134,11 +137,90 @@ header {
   content: "\00D7"; /* × */
 }
 
+main {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* ================= Homepage Section ================= */
+
+.home-hero-img {
+  position: relative;
+}
+
+.home-hero-img p {
+  text-align: center;
+}
+
+.home-hero-img img {
+  border: 1px solid black;
+}
+
+.home-hero-img button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 100px;
+  height: 44px;
+  border-radius: 1rem;
+}
+
+.home-section {
+  border: 1px #333;
+  background-color: gainsboro;
+  margin-top: 1rem;
+}
+
+.home-h2 {
+  margin: 0;
+  color: #fff;
+  background-color: #003366;
+  padding: 1rem;
+  text-align: center;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#forecast {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.forecast-day {
+  text-align: center;
+}
+
+/* .social-icons {
+  display: flex;
+  gap: 1rem;
+} */
+
+/* .social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+} */
+
+.social-link img {
+  width: 44px; /* icon size */
+  height: 44px; /* prevents stretching */
+  margin-right: 2rem;
+}
+
 h1 {
   margin: 1rem;
 }
 
-/* ================= Members Grid ================= */
+/* ================= Directory Page ================= */
+/* Members Grid */
 #members {
   display: grid;
   grid-template-columns: 1fr; /* single column on mobile */
@@ -155,7 +237,9 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .member-card:hover {
@@ -246,21 +330,50 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  #members.list .member-card {
-    flex-direction: row; /* override column on desktop */
-    gap: 1rem;
-  }
-}
 /* #members.list .member-card > div:not(.image-container) {
   flex: 1;
 } */
 
 footer {
-  text-align: center;
   padding: 1rem;
   background-color: #003366;
   color: #fff;
   font-size: 0.85rem;
   margin-top: 2rem;
+}
+
+.social-icons {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-details #footer-site-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#spotlight-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.spotlight-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  #members.list .member-card {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }

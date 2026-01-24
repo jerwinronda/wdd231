@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -64,16 +64,75 @@
       </div>
     </header>
     <main>
-      <h1>Directory</h1>
-      <div class="view-toggle">
-        <button id="grid-view">Grid</button>
-        <button id="list-view">List</button>
+      <div class="home-hero-img">
+        <p>
+          "Welcome to the Oroquieta City Chamber of Commerce—join us and be part
+          of a united force shaping Oroquieta’s business future."
+        </p>
+        <img
+          src="images/oroquieta-hero-img.webp"
+          alt=""
+          width="100%"
+          height="auto"
+        />
+
+        <button type="button">Join</button>
       </div>
-      <section id="members"></section>
+      <h1>Home</h1>
+      <div class="home-sections">
+        <section class="events home-section">
+          <h2 class="home-h2">Current Events</h2>
+          <ul>
+            <li>Monthly Networking Breakfast — July 14</li>
+            <li>Business Expo — August 3</li>
+            <li>Annual Gala — September 22</li>
+          </ul>
+        </section>
+        <section class="home-section">
+          <h2 class="home-h2">Current Weather</h2>
+          <div class="current-weather">
+            <img id="weather-icon" src="" alt="" />
+            <div>
+              <p><span id="current-temp"></span></p>
+              <p><span id="weather-desc"></span></p>
+            </div>
+          </div>
+        </section>
+        <section class="home-section">
+          <h2 class="home-h2">Weather Forecast</h2>
+          <div id="forecast"></div>
+        </section>
+        <section class="spotlights">
+          <div id="spotlight-container"></div>
+        </section>
+      </div>
     </main>
     <footer>
-      <p id="copyright"></p>
-      <p id="last-modified"></p>
+      <div class="footer-details">
+        <p id="footer-site-name">Oroquieta City Chamber of Commerce</p>
+        <p>Oroquieta City, Misamis Occidental</p>
+        <p>oroquietacc@gmail.com</p>
+        <p>+639530496669</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-link">
+          <img src="images/youtube-icon.svg" alt="Youtube Icon" />
+        </a>
+        <a href="#" class="social-link">
+          <img src="images/twittericon.svg" alt="Twitter Icon" />
+        </a>
+        <a href="#" class="social-link">
+          <img src="images/linkedin-icon.svg" alt="Linkkedin Icon" />
+        </a>
+      </div>
+      <div>
+        <p>WDD231 Class Project</p>
+        <p>Jerwin Ronda</p>
+        <p>
+          © <span id="currentYear"></span> Oroquieta City Chamber of Commerce
+        </p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
     </footer>
   </body>
 </html>

@@ -10,13 +10,13 @@ hamButton.addEventListener("click", () => {
 const membersContainer = document.querySelector("#members");
 
 // Add toggle buttons dynamically or in HTML
-const toggleContainer = document.createElement("div");
-toggleContainer.classList.add("view-toggle");
+// const toggleContainer = document.createElement("div");
+// toggleContainer.classList.add("view-toggle");
 // toggleContainer.innerHTML = `
 //   <button id="grid-view">Grid View</button>
 //   <button id="list-view">List View</button>
 // `;
-document.querySelector("main").insertBefore(toggleContainer, membersContainer);
+// document.querySelector("main").insertBefore(toggleContainer, membersContainer);
 
 document.querySelector("#grid-view").addEventListener("click", () => {
   membersContainer.classList.add("grid");
@@ -57,7 +57,7 @@ function displayMembers(members) {
         <p><strong>Address:</strong> ${member.address}</p>
         <p><strong>Phone:</strong> ${member.phone}</p>
         <p><strong>Membership Level:</strong> ${getMembershipLevel(
-          member.membership
+          member.membership,
         )}</p>
         <p>${member.description}</p>
         <a href="${member.website}" target="_blank">Visit Website</a>
