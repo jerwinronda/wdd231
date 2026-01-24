@@ -170,7 +170,6 @@ main {
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: bold;
-  margin-bottom: rem;
 }
 
 .hero-button:hover {
@@ -235,7 +234,7 @@ main {
 }
 
 h1 {
-  margin: 1rem o;
+  margin: 1rem;
 }
 
 /* ================= Directory Page ================= */
