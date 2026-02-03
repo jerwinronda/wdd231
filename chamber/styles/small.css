@@ -352,6 +352,82 @@ h1 {
   flex: 1;
 } */
 
+/* <===== Join Page Section =====> */
+/* --- Layout --- */
+.join-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .join-container {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+/* --- Membership Cards --- */
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.card a {
+  color: #005ea2;
+  font-weight: bold;
+}
+
+/* --- Modals --- */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 400px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 footer {
   padding: 1rem;
   background-color: #003366;

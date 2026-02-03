@@ -65,6 +65,7 @@ async function getForecast() {
 getForecast();
 function displayForecast(data) {
   const forecastDiv = document.querySelector("#forecast");
+  if (!forecastDiv) return;
   forecastDiv.innerHTML = "";
 
   const dailyForecasts = data.list
@@ -113,6 +114,8 @@ async function getSpotlights() {
 getSpotlights();
 
 function displaySpotlights(members) {
+  if (!spotlightContainer) return;
+
   // Filter silver & gold members only
   const qualifiedMembers = members.filter((member) => member.membership >= 2);
 
@@ -151,6 +154,55 @@ function getMembershipLevel(level) {
     default:
       return "Bronze";
   }
+}
+
+// Get modal elements
+const npModal = document.getElementById("np");
+const bronzeModal = document.getElementById("bronze");
+const silverModal = document.getElementById("silver");
+const goldModal = document.getElementById("gold");
+
+// Get links
+const npLink = document.getElementById("np-link");
+const bronzeLink = document.getElementById("bronze-link");
+const silverLink = document.getElementById("silver-link");
+const goldLink = document.getElementById("gold-link");
+
+// Open modals
+npLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  npModal.showModal();
+});
+
+bronzeLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  bronzeModal.showModal();
+});
+
+silverLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  silverModal.showModal();
+});
+
+goldLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  goldModal.showModal();
+});
+
+// Close modals
+const closeButtons = document.querySelectorAll(".close-modal");
+
+closeButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    this.closest("dialog").close();
+  });
+});
+
+// Set timestamp when form loads
+const timestampField = document.getElementById("timestamp");
+
+if (timestampField) {
+  timestampField.value = new Date().toISOString();
 }
 
 // ================= Footer Section =================

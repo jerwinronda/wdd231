@@ -102,6 +102,8 @@ function displayCourses(courseList) {
       <p>${course.title}</p>
       <p>Credits: ${course.credits}</p>
     `;
+    
+    
 
     certContainer.appendChild(card);
   });
