@@ -414,6 +414,7 @@ textarea {
 .card a {
   color: #005ea2;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 /* --- Modals --- */
@@ -426,6 +427,25 @@ dialog {
 
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Thank you section */
+.thank-you{
+  text-align: center;
+}
+
+.summary {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.summary p {
+  margin: 0.5rem 0;
 }
 
 footer {
