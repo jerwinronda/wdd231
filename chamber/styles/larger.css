@@ -83,7 +83,7 @@
   #home-nav,
   #directory-nav,
   #join-nav,
-  #discovery-nav {
+  #discover-nav {
     border: #fff;
     border-radius: 4px;
     color: #add8e6;
@@ -144,18 +144,18 @@
     border-radius: 8px;
     padding: 1.25rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition:
+    /* transition:
       transform 0.2s ease,
-      box-shadow 0.2s ease;
+      box-shadow 0.2s ease; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  .member-card:hover {
+  /* .member-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-  }
+  } */
 
   .member-card img {
     width: 100%;

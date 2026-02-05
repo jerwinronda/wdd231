@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page | Oroquieta City Chamber of Commerce</title>
+    <title>Directory | Oroquieta City Chamber of Commerce</title>
     <meta
       name="description"
       content="Discover local businesses, services, and opportunities through the Oroquieta City Chamber of Commerce directory. Supporting growth, trade, and community."
@@ -11,20 +11,20 @@
     <meta name="author" content="Jerwin Ronda" />
     <meta
       property="og:title"
-      content="Oroquieta City Chamber of Commerce | Home"
+      content="Directory - Oroquieta City Chamber of Commerce"
     />
     <meta
       property="og:description"
-      content="Welcome to the Oroquieta City Chamber of Commerce. Discover events, members, and business opportunities."
+      content="Explore the official directory of the Oroquieta City Chamber of Commerce and connect with local businesses, services, and community partners."
     />
     <meta
       property="og:image"
-      content="https://jerwinronda.github.io/wdd231/images/oroquieta-hero-img.webp
+      content="https://jerwinronda.github.io/wdd231/images/emcor-oro.webp
     "
     />
     <meta
       property="og:url"
-      content="https://jerwinronda.github.io/wdd231/chamber/index.html"
+      content="https://jerwinronda.github.io/wdd231/chamber/directory.html"
     />
     <link rel="Icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
   </head>
   <body>
     <header>
@@ -48,12 +48,16 @@
       <div class="header-right">
         <nav>
           <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
             <li>
-              <a href="index.html"><span id="home-nav">Home</span></a>
+              <a href="directory.html">Directory</a>
             </li>
-            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li>
+              <a href="discover.html"
+                ><span id="discover-nav">Discover</span></a
+              >
+            </li>
           </ul>
         </nav>
         <img
@@ -65,54 +69,7 @@
         <button id="menu-button" class="hambutton" aria-label="Menu"></button>
       </div>
     </header>
-    <main>
-      <div class="home-hero-img">
-        <p>
-          "Welcome to the Oroquieta City Chamber of Commerce—join us and be part
-          of a united force shaping Oroquieta’s business future."
-        </p>
-        <a href="join.html">Join</a>
-        <img
-          src="images/oroquieta-hero-img.webp"
-          alt="Oroquieta City Background"
-        />
-
-        <!-- <button type="button">Join</button> -->
-      </div>
-      <h1>Home</h1>
-      <div class="home-sections">
-        <section class="events home-section">
-          <h2 class="home-h2">Current Events</h2>
-          <ul>
-            <li>Monthly Networking Breakfast — July 14</li>
-            <li>Business Expo — August 3</li>
-            <li>Annual Gala — September 22</li>
-          </ul>
-        </section>
-        <section class="home-section">
-          <h2 class="home-h2">Current Weather</h2>
-          <div class="current-weather">
-            <img
-              id="weather-icon"
-              src="images/weather-forcast.png"
-              alt=" Current Weather Icon"
-            />
-
-            <div>
-              <p><span id="current-temp"></span></p>
-              <p><span id="weather-desc"></span></p>
-            </div>
-          </div>
-        </section>
-        <section class="home-section">
-          <h2 class="home-h2">Weather Forecast</h2>
-          <div id="forecast"></div>
-        </section>
-        <section class="spotlights">
-          <div id="spotlight-container"></div>
-        </section>
-      </div>
-    </main>
+    <main></main>
     <footer>
       <div class="footer-details">
         <p id="footer-site-name">Oroquieta City Chamber of Commerce</p>
