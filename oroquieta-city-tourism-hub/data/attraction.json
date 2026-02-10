@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Mount Malindang",
+    "type": "Mountain",
+    "location": "Oroquieta",
+    "description": "A protected natural park."
+  },
+  {
+    "name": "Hoyohoy Highland Stone Chapel",
+    "type": "Cultural",
+    "location": "Mobod",
+    "description": "Popular pilgrimage site."
+  }
+]
