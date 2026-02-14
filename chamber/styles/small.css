@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", Arial sans-serif;
 }
 
 /* ================= Header container ================= */
@@ -449,24 +449,31 @@ dialog::backdrop {
 
 /* <==========>Discovery Section<==========> */
 
-
 .discover-grid img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition:
-      transform 0.3s ease,
-      filter 0.3s ease;
-  }
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+.discover-grid section {
+  min-height: 280px; /* image + header + address placeholder */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
 
-  .discover-grid img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-  }
+
+.discover-grid img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
 
 .discover-grid img:hover {
   transform: scale(1.05);
@@ -480,12 +487,20 @@ footer {
   color: #fff;
   font-size: 0.85rem;
   margin-top: 2rem;
+  min-height: 120px;
+}
+#currentYear,
+#lastModified {
+  display: inline-block;
+  width: 60px; /* reserve enough space for year/date */
+  text-align: center;
 }
 
 .social-icons {
   margin: 2rem 0;
   display: flex;
   justify-content: center;
+  height: 32px;
 }
 
 .footer-details #footer-site-name {
