@@ -6,7 +6,7 @@
     <title>Discover | Oroquieta City Chamber of Commerce</title>
     <meta
       name="description"
-      content="Discover Oroquieta City's landmarks, cultural sites, natural attractions, and local gems. Explore churches, plazas, markets, beaches, bridges, and arenas that make the city vibrant and unique."
+      content="Discover Oroquieta City’s most iconic landmarks, historic churches, scenic beaches, public plazas, bustling markets, and cultural attractions. Explore natural beauty, local heritage, and vibrant community spaces that showcase the heart and charm of the city."
     />
     <meta name="author" content="Jerwin Ronda" />
     <meta
@@ -15,8 +15,9 @@
     />
     <meta
       property="og:description"
-      content="Explore Oroquieta City's Discover section featuring historical landmarks, beaches, plazas, markets, and arenas. Plan your visit and experience the heart of the city."
+      content="Experience the best of Oroquieta City through its historic churches, lively plazas, fresh seafood markets, scenic bayfront views, and modern sports arenas. Whether you're planning a visit or exploring online, discover the culture, history, and local gems that make the city truly unique."
     />
+
     <meta
       property="og:image"
       content="https://jerwinronda.github.io/wdd231/images/oroq-plaza.webp"
@@ -25,11 +26,7 @@
       property="og:url"
       content="https://jerwinronda.github.io/wdd231/chamber/discover.html"
     />
-
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" />
-
-    <!-- Preconnect & preload Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,75 +35,16 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500&display=swap"
       onload="this.rel = 'stylesheet'"
     />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-
-    <!-- Inline critical CSS for header and nav -->
-    <style>
-      body {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1rem;
-      }
-      .header-left {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .site-logo {
-        width: 44px;
-        height: 44px;
-      }
-      nav.navigation {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-        margin: 0;
-        padding: 0;
-      }
-      .discover-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        padding: 0 1rem;
-      }
-    </style>
-
-    <!-- Non-critical CSS: preload + defer -->
     <link
-      rel="preload"
-      href="styles/normalize.css"
-      as="style"
-      onload="this.rel = 'stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
     />
-    <link
-      rel="preload"
-      href="styles/small.css"
-      as="style"
-      onload="this.rel = 'stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="styles/larger.css"
-      as="style"
-      onload="this.rel = 'stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="styles/normalize.css" />
-      <link rel="stylesheet" href="styles/small.css" />
-      <link rel="stylesheet" href="styles/larger.css" />
-    </noscript>
-
-    <!-- JS: type="module" is deferred by default -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
     <script type="module" src="scripts/discover.js"></script>
   </head>
 
@@ -141,6 +79,7 @@
       </div>
     </header>
     <main>
+      <h1>Discover</h1>
       <section id="visitor-message"></section>
       <section class="discover-grid"></section>
     </main>
@@ -181,9 +120,10 @@
         <p>WDD231 Class Project</p>
         <p>Jerwin Ronda</p>
         <p>
-          © <span id="currentYear"></span> Oroquieta City Chamber of Commerce
+          © <span id="currentYear">2026</span> Oroquieta City Chamber of
+          Commerce
         </p>
-        <p>Last Modification: <span id="lastModified"></span></p>
+        <p>Last Modification: <span id="lastModified">Feb 14, 2026</span></p>
       </div>
     </footer>
   </body>
