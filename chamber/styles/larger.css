@@ -206,9 +206,54 @@
     object-fit: cover; /* fills the container, crops if necessary */
   }
 
+  /* <==========>Discovery Section<==========> */
+  .discover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 2rem;
+
+    width: 100%;
+    margin: 0 auto; /* centers it */
+    padding: 0 1rem; /* optional, prevents touching edges */
+    box-sizing: border-box;
+  }
+
+  /* .discover-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  } */
+  .discover-grid img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .discover-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
   footer {
     display: flex;
     justify-content: space-around;
+    width: 100%;
   }
 }
 

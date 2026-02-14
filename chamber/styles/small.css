@@ -429,9 +429,8 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-
 /* Thank you section */
-.thank-you{
+.thank-you {
   text-align: center;
 }
 
@@ -446,6 +445,33 @@ dialog::backdrop {
 
 .summary p {
   margin: 0.5rem 0;
+}
+
+/* <==========>Discovery Section<==========> */
+
+
+.discover-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  .discover-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+.discover-grid img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  transition: 0.3s ease;
 }
 
 footer {
