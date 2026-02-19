@@ -1,3 +1,29 @@
-@media (min-width: 768px) {
-    
+/* ===============================
+   TABLET & DESKTOP (768px+)
+=================================*/
+@media screen and (min-width: 768px) {
+  /* Hide hamburger */
+  .hambutton {
+    display: none;
+  }
+
+  /* Show nav normally */
+  #main-nav {
+    display: block; /* override display:none */
+    position: static; /* remove absolute positioning */
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
+  /* Make navigation horizontal */
+  .navigation {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .navigation a {
+    line-height: normal;
+  }
 }
