@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oroquieta City Tourism Hub</title>
+    <meta
+      name="description"
+      content="Discover the best attractions and eco-cultural tourism in Oroquieta City, Misamis Occidental. Plan your visit to beaches, waterfalls, and cultural sites."
+    />
+    <meta name="author" content="Jerwin Ronda" />
+    <meta
+      property="og:title"
+      content="Oroquieta City Tourism Hub | Explore Attractions & Eco-Tourism"
+    />
+    <meta
+      property="og:description"
+      content="Explore Oroquieta City's top attractions, beaches, cultural sites, and eco-tourism experiences. Plan your visit with our tourism hub."
+    />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/Oroquieta.webp"
+    />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <link rel="Icon" href="images/favicon.ico" />
+    <link rel="Icon" href="images/favicon.ico" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <!-- <link rel="stylesheet" href="styles/normalize.css" /> -->
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script type="module" src="scripts/finalproject.mjs"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img
+          src="images/oroquietacity-logo.svg"
+          alt="Site Logo"
+          class="site-logo"
+        />
+        <span class="site-name">Oroquieta City Tourism Hub</span>
+      </div>
+      <div class="header-right">
+        <nav id="main-nav">
+          <ul class="navigation">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="attractions.html">Attractions</a>
+            </li>
+            <li>
+              <a href="#"><span id="nav-attractions">Contact/Booking</span></a>
+            </li>
+          </ul>
+        </nav>
+        <button id="menu-button" class="hambutton" aria-label="Menu"></button>
+      </div>
+    </header>
+    <main>
+      <h1>Contact/Booking</h1>
+      <form id="tour-booking-form" action="confirmation.html" method="get">
+        <h2>Book Your Tour</h2>
+
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="John Doe"
+          required
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="john@example.com"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+63 912 345 6789"
+        />
+
+        <label for="guests">Number of Guests</label>
+        <input
+          type="number"
+          id="guests"
+          name="guests"
+          placeholder="2"
+          min="1"
+          required
+        />
+
+        <label for="date">Tour Date</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Tour Time</label>
+        <input type="time" id="time" name="time" />
+
+        <label for="pickup">Pick-up Location</label>
+        <input
+          type="text"
+          id="pickup"
+          name="pickup"
+          placeholder="Oroquieta City Center"
+        />
+
+        <label for="requests">Special Requests / Notes</label>
+        <textarea
+          id="requests"
+          name="requests"
+          placeholder="Vegetarian meal, wheelchair access"
+        ></textarea>
+
+        <label for="payment">Payment Method</label>
+        <select id="payment" name="payment" required>
+          <option value="">Select Payment</option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="PayPal">PayPal</option>
+          <option value="Cash">Cash</option>
+        </select>
+
+        <label for="promo">Promo Code</label>
+        <input type="text" id="promo" name="promo" placeholder="SUMMER20" />
+
+        <button type="submit" class="book-button">Book Now</button>
+      </form>
+
+      <script>
+        const form = document.getElementById("tour-booking-form");
+        const fields = [
+          "fullName",
+          "email",
+          "phone",
+          "guests",
+          "date",
+          "time",
+          "pickup",
+          "requests",
+          "payment",
+          "promo",
+        ];
+
+        // Load saved values from localStorage on page load
+        fields.forEach((field) => {
+          const saved = localStorage.getItem(field);
+          if (saved) {
+            document.getElementById(field).value = saved;
+          }
+        });
+
+        // Save values to localStorage on change
+        fields.forEach((field) => {
+          document.getElementById(field).addEventListener("input", (e) => {
+            localStorage.setItem(field, e.target.value);
+          });
+        });
+      </script>
+    </main>
+    <footer>
+      <div class="footer-details">
+        <p id="footer-site-name">Oroquieta City Tourism Hub</p>
+        <p>Oroquieta City, Misamis Occidental</p>
+        <p>oroquietath@gmail.com</p>
+        <p>+639530496669</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/rondajerwin/" class="social-link">
+          <img src="images/insta-icon.svg" alt="Instagram Icon" />
+        </a>
+        <a href="https://www.facebook.com/jerwin.ronda.7/" class="social-link">
+          <img src="images/fb-icon.svg" alt="Facebook Icon" />
+        </a>
+        <a href="#" class="social-link">
+          <img src="images/pinterest-icon.svg" alt="Pinterest Icon" />
+        </a>
+      </div>
+      <div>
+        <p>WDD231 Final Project</p>
+        <p>Jerwin Ronda</p>
+        <p>© <span id="currentYear"></span> Oroquieta City Tourism Hub</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+      </div>
+    </footer>
+  </body>
+</html>

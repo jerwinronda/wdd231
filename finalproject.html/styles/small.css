@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /* margin: 1rem; */
+  /* padding: 1rem; */
+  /* border: solid 1px #000; */
+}
+
+/* ================= Header container ================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #003366;
+  color: #fff;
+  position: relative; /* IMPORTANT */
+  flex-wrap: nowrap;
+}
+
+/* Left section: logo + site name */
+.header-left {
+  display: flex;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+
+.site-logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.site-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  /* white-space: normal; */
+  max-width: 180px;
+  line-height: 1.2rem;
+}
+
+/* ================= Right section: discover icon + button ================= */
+.header-right {
+  display: flex;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+
+.hambutton {
+  width: 44px;
+  height: 44px;
+  background-color: #0055aa;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* padding: 0; */
+  /* font-size: 1.2rem; */
+
+  /* position: relative; */
+  /* z-index: 1100; */
+}
+
+.hambutton:hover {
+  background-color: #0077cc;
+}
+
+/* ================= Mobile Navigation ================= */
+/* Hide nav initially */
+#main-nav {
+  display: none;
+  position: absolute;
+  top: 100%; /* directly below header */
+  left: 0; /* aligned left */
+  /* background: white; */
+  width: 100%;
+  padding: 15px;
+  background-color: #003f88;
+}
+
+#main-nav.show {
+  display: block;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation a {
+  padding: 0.5rem;
+  /* display: inline; */
+  text-decoration: none;
+  /* color: #0C4A6E; */
+  color: gainsboro;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.navigation a:hover {
+  border-radius: 2px;
+  color: #003366;
+  background-color: #fff;
+}
+
+#nav-home,
+#nav-attractions,
+#nav-contact {
+  text-decoration: underline;
+}
+
+/* hamburger icon */
+.hambutton::before {
+  content: "\2630"; /* ☰ */
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.hambutton.show::before {
+  content: "\00D7"; /* × */
+}
+
+.hero-image {
+  width: 100%; /* image fills the width of its container */
+  height: auto; /* maintains aspect ratio */
+  display: block; /* removes unwanted space below the image */
+  max-width: 100%; /* ensures it never exceeds container width */
+}
+
+.hero-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.biography {
+  padding: 0.5rem;
+}
+
+/* Container for spotlight cards */
+#spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center; /* centers each card horizontally */
+  /* align-items: start; */
+  max-width: 1200px;
+  margin: 0 auto; /* centers the grid on the page */
+  padding: 20px;
+}
+
+/* Each card */
+.spotlight-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 300px; /* ensures cards don’t stretch too wide */
+}
+
+/* Card hover effect */
+.spotlight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card image */
+.spotlight-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* makes image cover the container without distortion */
+  border-bottom: 1px solid #eee;
+}
+
+/* Card title */
+.spotlight-name {
+  margin: 12px 0 6px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Card address */
+.spotlight-address {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Card description */
+.spotlight-description {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: bold;
+  padding: 0 12px 12px 12px;
+}
+
+#btn-to-attractions {
+  text-align: center;
+  margin: 1rem;
+}
+
+.button-link {
+  display: inline-block; /* Allows padding to behave like a button */
+  padding: 12px 24px; /* Top/Bottom | Left/Right */
+  background-color: #003366; /* Button background */
+  color: #fff; /* Text color */
+  font-size: 1rem; /* Text size */
+  font-weight: bold; /* Bold text */
+
+  text-decoration: none; /* Remove underline */
+  border-radius: 6px; /* Rounded corners */
+  border: 2px solid transparent; /* Optional: border */
+  transition: all 0.3s ease; /* Smooth hover transition */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.button-link:hover {
+  background-color: #0055aa; /* Darker on hover */
+  border-color: #fff; /* Optional: border highlight */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.button-link:active {
+  transform: translateY(0); /* Reset lift when clicked */
+  background-color: #002244; /* Slightly darker for click effect */
+}
+
+/* ==========Attractions Section========== */
+#attractions-h1 {
+  padding: 20px;
+}
+
+#attractions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.attraction-card {
+  padding: 12px; /* top 0, left/right 12px, bottom 10px */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+}
+
+.attraction-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.attraction-card h3 {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+.attraction-card .address,
+.attraction-card .description {
+  margin: 0 10px 10px 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ==========contact/Booking Section========== */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Form and confirmation container */
+#tour-booking-form,
+.confirmation-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+#tour-booking-form h2,
+.confirmation-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #003366;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0055aa;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Submit button */
+.book-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.book-button:hover {
+  background-color: #0055aa;
+  transform: translateY(-2px);
+}
+
+.book-button:active {
+  background-color: #002244;
+  transform: translateY(0);
+}
+
+/* Confirmation text */
+.confirmation-container p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+.confirmation-container span {
+  font-weight: bold;
+  color: #003366;
+}
+
+/* ==========Footer Section========== */
+
+footer {
+  padding: 1rem;
+  background-color: #003366;
+  color: #fff;
+  /* font-size: 0.85rem; */
+  /* margin-top: 2rem; */
+  /* min-height: 220px; */
+}
+
+.footer-details #footer-site-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* horizontal spacing only */
+  /* height: 32px; */
+}
+
+.social-icons img {
+  width: 44px;
+  height: 44px;
+}
+
+#currentYear,
+#lastModified {
+  display: inline-block;
+  text-align: center;
+}
